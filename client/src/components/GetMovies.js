@@ -31,7 +31,7 @@ let reqOpt ={
   body:dataToSend
 };
 
-let JSONData = await fetch("http://localhost:7777/deleteAcc",reqOpt);
+let JSONData = await fetch("/deleteAcc",reqOpt);
 let JSOData = await JSONData.json();
 
 if(JSOData.Status =="Success"){
@@ -66,7 +66,7 @@ navigate("/Login")
 <div id='container' >
 <h5><strong>#<b>The latest</b>.Take a look at what's new.</strong></h5>
 {/* <b>Xstream shows </b> */}
-<img src={`http://localhost:7777/${loc.state.data.profile}`}></img>
+<img src={`${loc.state.data.profile}`}></img>
 <h2><strong>{loc.state.data.firstName}. <b>{loc.state.data.lastName}</b></strong></h2>
 <p><strong>{loc.state.data.email}</strong></p>
 

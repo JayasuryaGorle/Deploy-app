@@ -59,7 +59,7 @@ let sendUpdateDataToServer = async()=>{
             body: dataToSend,
         };
         
-let JSONData = await fetch ("http://localhost:7777/updateDetails",reqOptions);
+let JSONData = await fetch ("/updateDetails",reqOptions);
 let JSOData = await JSONData.json();
 
 alert(JSOData.msg);

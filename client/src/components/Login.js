@@ -9,7 +9,7 @@
     
     useEffect(()=>{
 
-        axios.defaults.baseURL = 'http://localhost:7777';
+        axios.defaults.baseURL = '';
         axios.defaults.headers.common['Authorization'] = localStorage.getItem("token");
         emailNameInputRef.current.value = localStorage.getItem("email");
         passwordInputRef.current.value = localStorage.getItem("password");
