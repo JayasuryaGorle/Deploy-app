@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const express = require("express");
 const path = require("node:path");
 const cors = require("cors");
-const morgan = require("morgan");
-const fs = require('fs');
+// const morgan = require("morgan");
+// const fs = require('fs');
 //const path = require('path');
 const multer = require("multer");
 const dotenv = require("dotenv");
@@ -49,11 +49,11 @@ let connectToMDB = async ()=>{
 
 
 
-// create a write stream (in append mode)
-let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+// // create a write stream (in append mode)
+// let accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
-// setup the logger
-app.use(morgan('combined', { stream: accessLogStream }));
+// // setup the logger
+// app.use(morgan('combined', { stream: accessLogStream }));
 
 
 let middleWareFunc =(req,res,next)=>{
