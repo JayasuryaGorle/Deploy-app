@@ -4,7 +4,7 @@ const path = require("node:path");
 const cors = require("cors");
 const morgan = require("morgan");
 const fs = require('fs');
-// const path = require('path');
+//const path = require('path');
 const multer = require("multer");
 const dotenv = require("dotenv");
 dotenv.config()
@@ -77,7 +77,7 @@ let paddySeedlings =(req,res,next)=>{
 let maintenance = (req,res,next)=>{
 console.log("3.Maintenance of the field");
   next();
-}
+};
 
 let harvesting =(req,res,next)=>{
   console.log("4.Harvesting");
